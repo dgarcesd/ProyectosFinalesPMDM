@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Proyecto Final 1EV</string>
+    <string name="juegos">Juegos</string>
+    <string name="carreras">Carreras</string>
+    <string name="deporte">Deporte</string>
+    <string name="disparos">Disparos</string>
+    <string name="aventura">Aventura</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="tienda">Tiendas de juegos</string>
+
+</resources>
