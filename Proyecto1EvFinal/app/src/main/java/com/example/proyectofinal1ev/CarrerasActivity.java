@@ -32,7 +32,7 @@ public class CarrerasActivity extends AppCompatActivity {
     // C 1
     private int offset;
 
-
+// HOLA SOY SERGIO EN LA b304
     // E 2
     private boolean aptoParaCargar;
 
