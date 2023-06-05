@@ -47,11 +47,11 @@ public class ListaJuegosAdapter extends RecyclerView.Adapter<ListaJuegosAdapter.
         Juego j = dataset.get(position);
         holder.nombreJuego.setText(j.getNombre());
         // 19 cargamos la imagen con Glide
-        Glide.with(context)
-                .load("https://63cd65a1d4d47898e39822fe.mockapi.io/" + j.getImagen() + ".png")
-                .centerCrop()
-                .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .into(holder.imagenJuego);
+//        Glide.with(context)
+//                .load("https://63cd65a1d4d47898e39822fe.mockapi.io/" + j.getUrl() + ".png")
+//                .centerCrop()
+//                .diskCacheStrategy(DiskCacheStrategy.ALL)
+//                .into(holder.imagenJuego);
         holder.nombreDesarrollador.setText(j.getDesarrollador());
         holder.anyoJuego.setText(j.getAnyo());
         holder.valoracionJuego.setRating(j.getValoracion());

@@ -65,7 +65,7 @@ public class CarrerasActivity extends AppCompatActivity {
 
 
                     if ((visibleItemCount + pastVisibleItems) >= totalItemCount){
-                        Log.i("videojuegos/{Categoria}","Llegamos al Final");
+                        Log.i("videojuegos","Llegamos al Final");
                         aptoParaCargar = false;
                         offset += 20;
                         obtenerDatos(offset);
@@ -91,7 +91,7 @@ public class CarrerasActivity extends AppCompatActivity {
         JuegoapiService service = retrofit.create(JuegoapiService.class);
 
         // B - Colocamos los parametros, limit sera 20, pero offset tiene que cambiar
-        Call<JuegoRespuesta> juegoRespuestaCall = service.obtenerListaJuegos("Carreras", 20, offset);
+        Call<JuegoRespuesta> juegoRespuestaCall = service.obtenerListaJuegos (20, offset);
 
         juegoRespuestaCall.enqueue(new Callback<JuegoRespuesta>() {
 
@@ -103,13 +103,13 @@ public class CarrerasActivity extends AppCompatActivity {
                     JuegoRespuesta juegoRespuesta = response.body();
 
 
-                    List<Juego> listaJuegos = juegoRespuesta.getJuegos();
+                    ArrayList<Juego> listaJuegos = juegoRespuesta.getResults();
 
                     //14 - Cuando recibimos los datos ya no los mostramos por consola
                     //se los mandamos al adaptador por medio de un metodo
                     listaJuegosAdapter.adicionarJuego((ArrayList<Juego>) listaJuegos);
                 }else{
-                    Log.i("videojuegos/{Categoria}", "onResponse: "+response.errorBody());
+                    Log.i("videojuegos", "onResponse: "+response.errorBody());
                 }
 
             }
@@ -118,7 +118,7 @@ public class CarrerasActivity extends AppCompatActivity {
             public void onFailure(Call<JuegoRespuesta> call, Throwable t) {
                 // E 4
                 aptoParaCargar = true;
-                Log.i("videojuegos/{Categoria}", "onFailure: "+t.getMessage());
+                Log.i("videojuegos", "onFailure: "+t.getMessage());
             }
         });
     }
